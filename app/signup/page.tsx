@@ -5,6 +5,7 @@
 // } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from '../ui/button'
+import React from 'react';
 
 export default function SignupForm() {
 
@@ -15,6 +16,25 @@ export default function SignupForm() {
           Sign up
         </h1>
         <div className="w-full">
+          <div>
+              <label
+                className="mb-3 mt-5 block text-xs font-medium text-gray-900"
+                htmlFor="email"
+              >
+                Name
+              </label>
+              <div className="relative">
+                <input
+                  className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+
+              </div>
+            </div>
           <div>
             <label
               className="mb-3 mt-5 block text-xs font-medium text-gray-900"
@@ -55,7 +75,7 @@ export default function SignupForm() {
             </div>
           </div>
         </div>
-        <LoginButton />
+        <SignupButton />
         <div className="flex h-8 items-end space-x-1">
           {/* Add form errors here */}
         </div>
@@ -67,7 +87,7 @@ export default function SignupForm() {
 function SignupButton() {
   return (
     <Button className="mt-4 w-full">
-      Sign up <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
+      Sign up
     </Button>
   );
 }
